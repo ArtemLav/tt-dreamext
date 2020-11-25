@@ -1,0 +1,123 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 129px 17px;
+  border-bottom: 1px solid $border-color2;
+
+  &__logo {
+    width: 155px;
+    height: 50px;
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    padding: 7px 9px 7px 16px;
+    width: 389px;
+    height: 50px;
+
+    border: 1px solid $border-color1;
+    border-radius: 4px;
+
+    transition: border-color 0.2s;
+
+    &:hover {
+      border-color: $accent-color;
+    }
+  }
+
+  &__search-input {
+    width: 100%;
+    border: none;
+
+    &::placeholder {
+      color: $optional-text-color1;
+      font-weight: 450;
+    }
+  }
+
+  &__search-button {
+    margin-left: 5px;
+    width: 98px;
+    height: 36px;
+
+    background-color: $accent-color;
+    border-radius: 2px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 311px;
+  }
+
+  &__language-select {
+    width: 57px;
+    height: 24px;
+
+    color: $optional-text-color2;
+    font-weight: 450;
+
+    border: none;
+  }
+
+  &__login-button {
+    width: 100px;
+    height: 36px;
+
+    color: white;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+
+    background-color: $accent-color;
+    border-radius: 2px;
+    border: none;
+
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__login-button-image {
+    margin-right: 11px;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 78px;
+    height: 24px;
+
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__menu-burger-label {
+    font-weight: 450;
+    color: $optional-text-color2;
+  }
+}

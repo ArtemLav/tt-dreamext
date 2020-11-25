@@ -1,0 +1,23 @@
+.info {
+  padding: 30px 125px 0;
+
+  &__nav {
+    margin-bottom: 33px;
+  }
+
+  &__nav-item {
+    color: $optional-text-color2;
+
+    &_underlined {
+      text-decoration: underline;
+    }
+
+    &_secondary {
+      color: $optional-text-color1;
+    }
+  }
+
+  &__nav-arrow {
+    margin: 0 15px;
+  }
+}

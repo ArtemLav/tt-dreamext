@@ -1,0 +1,143 @@
+.main-info {
+  display: flex;
+  color: white;
+
+  &__left-side {
+    padding: 66px 90px 82px;
+    width: 721px;
+    height: 600px;
+    background: linear-gradient(130.14deg, #2bbb97 45.98%, #25aef6 91.19%);
+    border-radius: 4px 0 0 4px;
+  }
+
+  &__title-container {
+    display: flex;
+    align-items: center;
+    margin-top: 17px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+
+  &__subtitle {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__mark {
+    display: flex;
+    justify-content: space-around;
+
+    margin-left: 22px;
+    width: 73px;
+    height: 30px;
+
+    font-weight: 750;
+    font-size: 20px;
+    line-height: 25px;
+
+    border: 2px solid white;
+    border-radius: 4px;
+  }
+
+  &__location {
+    display: flex;
+    align-items: flex-start;
+    max-width: 540px;
+    margin-top: 42px;
+  }
+
+  &__location-icon {
+    margin-right: 18px;
+  }
+
+  &__phone,
+  &__web {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 23px;
+  }
+
+  &__phone-icon {
+    margin-right: 17px;
+  }
+
+  &__contact-icon {
+    margin: 2px 0 0 5px;
+  }
+
+  &__web-icon {
+    margin-right: 16px;
+  }
+
+  &__button-container {
+    margin-top: 42px;
+  }
+
+  &__button {
+    width: 200px;
+    height: 50px;
+
+    background: inherit;
+    color: white;
+    font-weight: 600;
+    line-height: 24px;
+
+    border: 2px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__right-side {
+    width: 690px;
+  }
+
+  &__right-top {
+    background: url("../images/doctor-photo.png");
+  }
+
+  &__right-bottom {
+    background: url("../images/map.png");
+  }
+
+  &__right-top,
+  &__right-bottom {
+    padding-top: 220px;
+    padding-left: 52px;
+    height: 300px;
+    box-shadow: 0 0 0 150px rgba(58, 89, 120, 0.8) inset;
+  }
+
+  &__right-description {
+    display: flex;
+    align-items: center;
+  }
+
+  &__show-photos {
+    margin-left: 13px;
+  }
+
+  &__show-map {
+    margin-left: 13px;
+  }
+
+  &__show-photos,
+  &__show-map {
+    font-size: 24px;
+    line-height: 29px;
+    cursor: pointer;
+
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

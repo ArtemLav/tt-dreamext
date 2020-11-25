@@ -1,7 +1,20 @@
 @import "utils";
-@import "fonts";
-@import "typography";
+@import "reset";
+@import "header";
+@import "info";
+@import "main-info";
+@import "about";
+@import "specializations";
 
-body {
-  background: $c-gray;
+html {
+  font-family: Avenir Next Cyr, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1660px;
+  margin: 0 auto;
 }

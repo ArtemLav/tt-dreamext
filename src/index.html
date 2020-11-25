@@ -3,11 +3,299 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Moni Heal</title>
+    <link
+      href="//db.onlinewebfonts.com/c/11d164da9b46e6f7955e396757e5ca70?family=Avenir+Next+Cyr"
+      rel="stylesheet"
+      type="text/css"
+    >
+    <link
+      rel="shortcut icon"
+      href="images/moni-favicon.ico"
+      type="image/x-icon"
+    >
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <div class="page">
+      <div class="container">
+
+        <header class="header">
+          <div class="header__logo">
+            <img src="images/Logo_color.svg" alt="moni heal logo">
+          </div>
+
+          <div class="header__search">
+            <input
+              type="text"
+              class="header__search-input"
+              placeholder="Пошук фахівця">
+            <button type="button" class="header__search-button">
+              Знайти
+            </button>
+          </div>
+
+          <div class="header__menu-container">
+            <div class="header__language">
+              <select
+                name="language"
+                class="header__language-select"
+              >
+                <option value="ukrainian">Укр</option>
+                <option value="russian">Рус</option>
+                <option value="english">Eng</option>
+              </select>
+            </div>
+
+            <div class="header__login">
+              <button type="button" class="header__login-button">
+                <img
+                  class="header__login-button-image"
+                  src="images/header-button-vector.svg"
+                  alt="lock icon"
+                >
+                <span class="header__login-button-text">Увійти</span>
+              </button>
+            </div>
+
+            <div class="header__menu">
+              <span class="header__menu-burger-label">Меню</span>
+              <img src="images/burger-vector.svg" alt="burger icon">
+            </div>
+          </div>
+        </header>
+
+        <section class="info">
+          <div class="info__nav">
+            <span class="info__nav-item info__nav-item_underlined">Головна</span>
+            <img
+              class="info__nav-arrow"
+              src="images/arrow.svg"
+              alt="arrow icon"
+            >
+            <span class="info__nav-item info__nav-item_primary">Клініки</span>
+            <img
+              class="info__nav-arrow"
+              src="images/arrow.svg"
+              alt="arrow icon"
+            >
+            <span class="info__nav-item info__nav-item_secondary">Smart Medical Center</span>
+          </div>
+
+          <div class="info__main-info main-info">
+            <div class="main-info__left-side">
+              <div class="main-info__logo">
+                <img src="images/parens-logo.png" alt="parens logo">
+              </div>
+
+              <div class="main-info__title-container">
+                <span class="main-info__title">Parens-Україна</span>
+                <div class="main-info__mark">
+                  <img src="images/star.svg" alt="star">
+                  <span class="main-info__mark-text">4,8</span>
+                </div>
+              </div>
+              <p class="main-info__subtitle">Центр репродукції</p>
+
+              <div class="main-info__location">
+                <img
+                  src="images/location-icon.svg"
+                  class="main-info__location-icon"
+                  alt="location icon"
+                >
+                <span class="main-info__location-description">
+                  м. Київ, вул. Михайла Максимовича (Трутенка), 3, Голосіївський район
+                </span>
+              </div>
+
+              <div class="main-info__phone">
+                <img
+                  src="images/phone-icon.svg"
+                  class="main-info__phone-icon"
+                  alt="location icon"
+                >
+                <span class="main-info__phone-number">
+                  +38 (050) 137 - 60 - 41
+                </span>
+                <img
+                  class="main-info__contact-icon"
+                  src="images/contact-toggler.svg"
+                  alt="contact-icon"
+                >
+              </div>
+
+              <div class="main-info__web">
+                <img
+                  class="main-info__web-icon"
+                  src="images/planet-icon.svg"
+                  alt="location icon"
+                >
+                <span class="main-info__web-address">
+                  smartmedicalcenter.ua
+                </span>
+              </div>
+
+              <div class="main-info__button-container" >
+                <button
+                  type="button"
+                  class="main-info__button"
+                >
+                  Передзвоніть мені
+                </button>
+              </div>
+            </div>
+
+            <div class="main-info__right-side">
+              <div class="main-info__right-top">
+                <div class="main-info__right-description">
+                  <img
+                    src="images/image-icon.svg"
+                    alt="doctor"
+                  >
+                  <span class="main-info__show-photos">Переглянути 12 Фото</span>
+                </div>
+              </div>
+
+              <div class="main-info__right-bottom">
+                <div class="main-info__right-description">
+                  <img
+                    src="images/map-icon.svg"
+                    alt="map"
+                  >
+                  <span class="main-info__show-map">Клініка на мапі</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about">
+          <div class="about__article">
+            <h2 class="about__title">
+              Про клініку
+            </h2>
+
+            <p class="about__paragraph">
+              Основна спеціалізація клініки Flexis це лікування і реабілітація пацієнтів
+              з ревматологічними, неврологічними і травматологічними ушкодженнями опорно-рухового апарату.
+            </p>
+
+            <p class="about__paragraph">
+              Ми створили велику і ультрасучасну апаратну базу, яка дозволяє проводити
+              комп&apos;ютерне витягування, імпульсно- хвильову терапію, застосовувати для
+              лікування лазерні технології лікування, миостимуляцию, магніторезонансну
+              терапію, внутрішньосуглобові ін&apos;єкції, алопатичну терапію.
+            </p>
+
+            <p class="about__paragraph">
+              Сучасні технології в комплексі з апаратурою і лікарським професіоналізмом
+              дозволяють повернути людині колишню активність і інтерес до діяльності в
+              тих життєвих сферах, які здавалися вже безповоротно втраченими.
+            </p>
+
+            <a href="#" class="about__link">Читати повністю</a>
+          </div>
+
+          <div class="about__schedule">
+            <h2 class="about__title">Графік роботи</h2>
+
+            <div class="about__work-day">
+              <span class="about__day">Понеділок:</span>
+              <span class="about__time">8:30-19:00</span>
+            </div>
+
+            <div class="about__work-day">
+              <span class="about__day">Вівторок:</span>
+              <span class="about__time">8:30-19:00</span>
+            </div>
+
+            <div class="about__work-day">
+              <span class="about__day">Середа:</span>
+              <span class="about__time">8:30-19:00</span>
+            </div>
+
+            <div class="about__work-day">
+              <span class="about__day">Четвер:</span>
+              <span class="about__time">8:30-19:00</span>
+            </div>
+
+            <div class="about__work-day">
+              <span class="about__day">П&apos;ятниця:</span>
+              <span class="about__time">8:30-19:00</span>
+            </div>
+
+            <div class="about__work-day">
+              <span class="about__day">Субота:</span>
+              <span class="about__time">8:30-19:00</span>
+            </div>
+
+            <div class="about__work-day">
+              <span class="about__day">Неділя:</span>
+              <span class="about__time">Вихідний</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="specializations">
+          <div class="specializations__heading">
+            <h2 class="specializations__title">Спеціальності (43)</h2>
+            <button
+              class="specializations__button"
+              type="button"
+            >
+              Показати всі
+            </button>
+          </div>
+
+          <div class="specializations__list">
+            <div class="specializations__items">
+              <span class="specializations__item">
+                Акушер-гінеколог
+                <span class="specializations__count">(16)</span>
+              </span>
+              <span class="specializations__item">
+                Алерголог
+                <span class="specializations__count">(7)</span>
+              </span>
+              <span class="specializations__item">
+                Алерголог дитячий
+                <span class="specializations__count">(1)</span>
+              </span>
+            </div>
+
+            <div class="specializations__items">
+              <span class="specializations__item">
+                Генетик
+                <span class="specializations__count">(12)</span>
+              </span>
+              <span class="specializations__item">
+                Гематолог
+                <span class="specializations__count">(1)</span>
+              </span>
+              <span class="specializations__item">
+                Гінеколог-онколог
+                <span class="specializations__count">(3)</span>
+              </span>
+            </div>
+
+            <div class="specializations__items">
+              <span class="specializations__item">
+                Вірусолог
+                <span class="specializations__count">(3)</span>
+              </span>
+              <span class="specializations__item">
+                Токсиколог
+                <span class="specializations__count">(11)</span>
+              </span>
+              <span class="specializations__item">
+                Хірург-Онколог
+                <span class="specializations__count">(2)</span>
+              </span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
