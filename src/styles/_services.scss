@@ -1,0 +1,93 @@
+.services {
+
+  &__heading {
+    @extend %section-heading;
+    padding: 0 125px;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__button {
+    @extend %show-more-button;
+  }
+
+  &__list {
+    @extend %cards__list;
+  }
+
+  &__arrow-left {
+    @extend %arrow-left;
+  }
+
+  &__arrow-right {
+    @extend %arrow-right;
+  }
+
+  &__cards {
+    display: flex;
+    margin: 0 5px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    width: 330px;
+    height: 180px;
+    border: 1px solid $border-color1;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      border-color: $optional-button-color;
+      box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__card-title {
+    margin: 30px 30px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+  }
+
+  &__card-subtitle {
+    margin: 0 30px 18px ;
+    font-size: 12px;
+    line-height: 15px;
+    color: $subtitle-text-color;
+  }
+
+  &__card-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px 18px;
+  }
+
+  &__card-time,
+  &__card-price {
+    display: flex;
+    align-items: center;
+  }
+
+  &__card-text {
+    margin-left: 8px;
+  }
+
+  &__card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: $card-image-color;
+    border-radius: 16px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: rotate(10deg) translateY(-3px);
+    }
+  }
+}

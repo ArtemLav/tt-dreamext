@@ -1,0 +1,193 @@
+.doctors {
+  padding-top: 121px;
+
+  &__heading {
+    @extend %section-heading;
+    padding: 0 125px;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__button {
+    @extend %show-more-button;
+  }
+
+  &__list {
+    @extend %cards__list;
+  }
+
+  &__arrow-left {
+    @extend %arrow-left;
+  }
+
+  &__arrow-right {
+    @extend %arrow-right;
+  }
+
+  &__cards {
+    display: flex;
+    margin: 0 5px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    width: 330px;
+    height: 305px;
+    border: 1px solid $border-color1;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      border-color: $optional-button-color;
+      box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+      height: 472px;
+    }
+
+    &:not(:hover) {
+      height: 305px;
+    }
+  }
+
+  &__card-extra {
+    display: none;
+  }
+
+  &__card:hover .doctors__card-extra {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__card-header {
+    display: flex;
+    padding: 30px 30px 0;
+    border-bottom: 1px solid $border-color1;
+  }
+
+  &__card-photo {
+    margin-right: 16px;
+  }
+
+  &__card-title {
+    max-width: 174px;
+  }
+
+  &__card-name {
+    display: block;
+    margin-bottom: 13px;
+    color: $optional-text-color4;
+    font-weight: bolder;
+  }
+
+  &__card-position {
+    font-size: 12px;
+    font-weight: bolder;
+    line-height: 14px;
+    color: $optional-text-color2;
+  }
+
+  &__card-status {
+    position: relative;
+    top: -20px;
+    left: 5px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: $optional-text-color1;
+    border: 1px solid white;
+    border-radius: 10px;
+
+    &_active {
+      background-color: $optional-button-color;
+    }
+  }
+
+  &__card-status-text {
+    position: relative;
+    top: -25px;
+    left: 6px;
+
+    font-size: 10px;
+    line-height: 12px;
+    color: $optional-text-color1;
+
+    &_active {
+      position: relative;
+      left: 20px;
+      font-weight: bold;
+      color: $optional-button-color;
+    }
+  }
+
+  &__card-info {
+    display: flex;
+    padding: 15px 28px 13px 30px;
+    border-bottom: 1px solid $border-color1;
+    justify-content: space-between;
+  }
+
+  &__card-info-title {
+    @extend %card-title;
+  }
+
+  &__card-info-visual {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+  }
+
+  &__card-info-text {
+    display: block;
+    margin-left: 9px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+  }
+
+  &__card-contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 23px 29px 18px;
+  }
+
+  &__card-contacts-title {
+    @extend %card-title;
+  }
+
+  &__card-contacts-text {
+    font-size: 12px;
+    line-height: 15px;
+
+    &_top {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__card-contacts-button {
+    margin-top: 32px;
+    width: 128px;
+    height: 36px;
+
+    background-color: $optional-button-color;
+    border-radius: 2px;
+    border: none;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+    &:hover {
+      color: $optional-button-color;
+      background-color: white;
+      border: 1px solid $optional-button-color;
+    }
+  }
+}
