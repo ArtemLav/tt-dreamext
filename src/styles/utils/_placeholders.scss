@@ -41,6 +41,12 @@
   background-color: white;
   border: 1px solid $optional-button-color;
   border-radius: 30px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  }
 }
 
 %arrow-right {
@@ -49,10 +55,33 @@
   background-color: $optional-button-color;
   border-radius: 30px;
   border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  }
 }
 
 %card-title {
   font-size: 12px;
   line-height: 14px;
   color: $optional-text-color3;
+}
+
+%page-link {
+  display: block;
+  margin-top: 40px;
+
+  color: $optional-text-color5;
+  text-decoration: underline;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

@@ -6,7 +6,8 @@
 
 body,
 p,
-h2 {
+h2,
+h4 {
   margin: 0;
 }
 
@@ -22,4 +23,11 @@ select {
 a,
 a:visited {
   text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

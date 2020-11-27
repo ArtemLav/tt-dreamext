@@ -1,0 +1,95 @@
+.comments {
+  padding: 120px 122px 0;
+
+  &__title {
+    @extend %section-title;
+    margin-bottom: 30px;
+  }
+
+  &__people {
+    display: flex;
+  }
+
+  &__person {
+    margin-left: 30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    padding-bottom: 16px;
+  }
+
+  &__photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__description {
+    margin-left: 20px;
+  }
+
+  &__name {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bolder;
+    color: $optional-text-color4;
+  }
+
+  &__status {
+    margin-top: 5px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+    color: $error-text-color;
+
+    &_active {
+      color: $optional-button-color;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    padding: 31px 31px 30px;
+    width: 451px;
+    height: 283px;
+    background-color: $comment-box-color;
+    border-radius: 4px;
+
+    &_pointed::before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 37px;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 18px solid $comment-box-color;
+    }
+  }
+
+  &__date {
+    position: relative;
+    left: 4px;
+
+    color: $optional-text-color3;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 17px;
+  }
+
+  &__text {
+    margin-top: 2px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__link {
+    @extend %page-link;
+  }
+}

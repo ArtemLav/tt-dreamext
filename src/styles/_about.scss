@@ -21,20 +21,7 @@
   }
 
   &__link {
-    display: block;
-    margin-top: 40px;
-
-    color: $optional-text-color5;
-    text-decoration: underline;
-    font-size: 20px;
-    line-height: 25px;
-    font-weight: 600;
-
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 0.8;
-    }
+    @extend %page-link;
   }
 
   &__schedule {
