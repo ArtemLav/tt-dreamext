@@ -1,8 +1,11 @@
 @import "utils";
+@import "fonts";
 @import "reset";
 @import "header";
 @import "info";
 @import "main-info";
+@import "gallery";
+@import "contact-numbers";
 @import "about";
 @import "specializations";
 @import "services";
@@ -16,12 +19,17 @@
 html {
   font-family: Avenir Next Cyr, sans-serif;
   font-size: 16px;
-  line-height: 20px;
-  font-weight: normal;
+  line-height: 19.6px;
+  font-weight: 450;
   font-style: normal;
 }
 
 .container {
   max-width: 1660px;
   margin: 0 auto;
+}
+
+.page {
+  position: relative;
+  z-index: 10;
 }

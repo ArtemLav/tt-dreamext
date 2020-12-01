@@ -1,0 +1,54 @@
+.contact-numbers {
+  position: absolute;
+  left: 145px;
+  top: 337px;
+
+  display: none;
+  flex-direction: column;
+
+  width: 241px;
+  height: 215px;
+
+  border: 1px solid $border-color2;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  background-color: white;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 33px 20px 41px;
+
+    @include manage-font(14px, 17.15px, 300);
+    color: black;
+    border-bottom: 1px solid $border-color2;
+  }
+
+  &__button {
+    border: none;
+    background: inherit;
+    cursor: pointer;
+  }
+
+  &__phones {
+    padding: 26px 35px 36px;
+  }
+
+  &__phone {
+    margin-top: 17px;
+    color: black;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .contact-numbers {
+    top: 300px;
+    left: 80px;
+  }
+}

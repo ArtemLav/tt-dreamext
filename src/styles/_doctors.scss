@@ -16,18 +16,23 @@
 
   &__list {
     @extend %cards__list;
+    align-items: flex-start;
   }
 
   &__arrow-left {
     @extend %arrow-left;
+    margin-top: 133px;
   }
 
   &__arrow-right {
     @extend %arrow-right;
+    margin-top: 133px;
   }
 
   &__cards {
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin: 0 5px;
   }
 
@@ -79,13 +84,11 @@
     display: block;
     margin-bottom: 13px;
     color: $optional-text-color4;
-    font-weight: bolder;
+    font-weight: 600;
   }
 
   &__card-position {
-    font-size: 12px;
-    font-weight: bolder;
-    line-height: 14px;
+    @include manage-font(12px, 14px, 600);
     color: $optional-text-color2;
   }
 
@@ -111,14 +114,13 @@
     top: -25px;
     left: 6px;
 
-    font-size: 10px;
-    line-height: 12px;
+    @include manage-font(10px, 12.25px, 300);
     color: $optional-text-color1;
 
     &_active {
       position: relative;
       left: 20px;
-      font-weight: bold;
+      font-weight: 750;
       color: $optional-button-color;
     }
   }
@@ -131,7 +133,8 @@
   }
 
   &__card-info-title {
-    @extend %card-title;
+    @include manage-font(12px, 14.7px, 450);
+    color: $optional-text-color3;
   }
 
   &__card-info-visual {
@@ -143,9 +146,7 @@
   &__card-info-text {
     display: block;
     margin-left: 9px;
-    font-size: 12px;
-    line-height: 15px;
-    font-weight: bold;
+    @include manage-font(12px, 15px, 750);
   }
 
   &__card-contacts {
@@ -155,12 +156,12 @@
   }
 
   &__card-contacts-title {
-    @extend %card-title;
+    @include manage-font(12px, 14.7px, 450);
+    color: $optional-text-color3;
   }
 
   &__card-contacts-text {
-    font-size: 12px;
-    line-height: 15px;
+    @include manage-font(12px, 14.7px, 300);
 
     &_top {
       margin-bottom: 12px;
@@ -176,9 +177,7 @@
     border-radius: 2px;
     border: none;
 
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 24px;
+    @include manage-font(14px, 24px, 600);
     color: white;
 
     cursor: pointer;
@@ -188,6 +187,39 @@
       color: $optional-button-color;
       background-color: white;
       border: 1px solid $optional-button-color;
+    }
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .doctors {
+    padding-top: 50px;
+
+    &__heading {
+      padding: 0 2vw;
+    }
+    &__cards {
+      margin-top: 15px;
+    }
+
+    &__card {
+      margin-top: 15px;
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .doctors {
+    &__cards {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .doctors {
+    &__card {
+      margin: 15px 0 0;
     }
   }
 }

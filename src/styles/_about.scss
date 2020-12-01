@@ -9,15 +9,12 @@
 
   &__title {
     margin-bottom: 35px;
-    font-size: 24px;
-    line-height: 29px;
+    @extend %section-title;
   }
 
   &__paragraph {
     margin-top: 35px;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 25px;
+    @include manage-font(20px, 25px, 300);
   }
 
   &__link {
@@ -35,9 +32,7 @@
 
     border-bottom: 1px solid $border-color1;
 
-    font-weight: 450;
-    font-size: 20px;
-    line-height: 25px;
+    @include manage-font(20px, 25px, 450);
 
     &:first-of-type {
       padding-top: 0;
@@ -50,5 +45,37 @@
 
   &__time {
     color: $optional-text-color4;
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .about {
+    padding: 30px 2vw 0;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .about {
+    padding-top: 15px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  &__article {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .about {
+    &__paragraph {
+      margin-top: 15px;
+      @include manage-font(16px, 20px, 300);
+    }
   }
 }

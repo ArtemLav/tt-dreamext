@@ -33,17 +33,13 @@
   }
 
   &__name {
-    font-size: 20px;
-    line-height: 25px;
-    font-weight: bolder;
+    @include manage-font(20px, 25px, 600);
     color: $optional-text-color4;
   }
 
   &__status {
     margin-top: 5px;
-    font-size: 20px;
-    line-height: 25px;
-    font-weight: bold;
+    @include manage-font(20px, 25px, 750);
     color: $error-text-color;
 
     &_active {
@@ -77,19 +73,61 @@
     left: 4px;
 
     color: $optional-text-color3;
-    font-size: 14px;
-    font-weight: bolder;
-    line-height: 17px;
+    @include manage-font(14px, 17.15px, 450);
   }
 
   &__text {
     margin-top: 2px;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 29px;
+    @include manage-font(24px, 29.4px, 300);
   }
 
   &__link {
     @extend %page-link;
+  }
+}
+
+@media (max-width: 1550px) {
+  .comments {
+
+    &__people {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__person {
+      margin: 20px 10px;
+
+      &:first-child {
+        margin: 20px 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .comments {
+    padding: 50px 2vw;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .comments {
+
+    &__photo {
+      margin-left: 5px;
+    }
+
+    &__bottom {
+      padding: 15px;
+      width: 330px;
+    }
+
+    &__date {
+      @include manage-font(12px, 14px, 450);
+    }
+
+    &__text {
+      @include manage-font(22px, 26px, 300);
+    }
   }
 }

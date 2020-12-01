@@ -32,15 +32,15 @@
 
   &__item {
     margin-bottom: 37px;
-    font-size: 20px;
-    line-height: 25px;
+    @include manage-font(20px, 24.5px, 450);
     cursor: pointer;
 
     &:first-letter {
       color: $optional-text-color5;
     }
 
-    &:hover {
+    &:hover,
+    &:hover:first-letter {
       color: $optional-button-color;
       text-decoration: underline;
     }
@@ -48,5 +48,28 @@
 
   &__count {
     color: $optional-text-color1;
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .specializations {
+    padding: 50px 2vw 0;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .specializations {
+    &__list {
+      flex-direction: column;
+    }
+
+    &__items {
+      margin-right: 0;
+    }
+
+    &__item {
+      margin: 10px auto;
+      @include manage-font(18px, 20px, 450);
+    }
   }
 }

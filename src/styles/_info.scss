@@ -6,6 +6,7 @@
   }
 
   &__nav-item {
+    @include manage-font(16px, 19.6px, 300);
     color: $optional-text-color2;
 
     &_underlined {
@@ -19,5 +20,31 @@
 
   &__nav-arrow {
     margin: 0 15px;
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .info {
+    padding: 20px 2vw 0;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .info {
+    &__nav {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .info {
+    &__nav-arrow {
+      margin: 0 5px;
+    }
+
+    &__nav-item {
+      @include manage-font(14px, 17px, 300);
+    }
   }
 }

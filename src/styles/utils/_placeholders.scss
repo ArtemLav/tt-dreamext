@@ -1,11 +1,16 @@
+@import "mixins";
+
 %section-heading {
   display: flex;
   justify-content: space-between;
 }
 
 %section-title {
-  font-size: 24px;
-  line-height: 29px;
+  @include manage-font(24px, 29.4px, 600);
+
+  @media (max-width: $mobile-breakpoint) {
+    @include manage-font(20px, 26px, 600);
+  }
 }
 
 %show-more-button {
@@ -17,8 +22,7 @@
   border-radius: 2px;
 
   color: $optional-button-color;
-  font-size: 14px;
-  line-height: 24px;
+  @include manage-font(14px, 24px, 600);
 
   cursor: pointer;
   transition: color 0.2s, background-color 0.2s;
@@ -33,6 +37,10 @@
   display: flex;
   align-items: center;
   padding: 27px 45px 0;
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 0;
+  }
 }
 
 %arrow-left {
@@ -46,6 +54,10 @@
 
   &:hover {
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (max-width: $small-desktop-breakpoint) {
+    display: none;
   }
 }
 
@@ -61,12 +73,10 @@
   &:hover {
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
   }
-}
 
-%card-title {
-  font-size: 12px;
-  line-height: 14px;
-  color: $optional-text-color3;
+  @media (max-width: $small-desktop-breakpoint) {
+    display: none;
+  }
 }
 
 %page-link {
@@ -75,9 +85,7 @@
 
   color: $optional-text-color5;
   text-decoration: underline;
-  font-size: 20px;
-  line-height: 25px;
-  font-weight: 600;
+  @include manage-font(20px, 25px, 600);
 
   transition: opacity 0.2s;
 
