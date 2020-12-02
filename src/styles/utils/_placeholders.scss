@@ -36,11 +36,7 @@
 %cards__list {
   display: flex;
   align-items: center;
-  padding: 27px 45px 0;
-
-  @media (max-width: $tablet-breakpoint) {
-    padding: 0;
-  }
+  padding: 27px 40px 0;
 }
 
 %arrow-left {
@@ -56,8 +52,10 @@
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
   }
 
-  @media (max-width: $small-desktop-breakpoint) {
-    display: none;
+  @media (max-width: 1650px) {
+    position: absolute;
+    top: 90px;
+    left: 30%;
   }
 }
 
@@ -74,8 +72,10 @@
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
   }
 
-  @media (max-width: $small-desktop-breakpoint) {
-    display: none;
+  @media (max-width: 1650px) {
+    position: absolute;
+    top: 90px;
+    right: 30%;
   }
 }
 

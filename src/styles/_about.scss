@@ -5,6 +5,10 @@
 
   &__article {
     max-width: 933px;
+
+    @media (max-width: 1408px) {
+      max-width: 500px;
+    }
   }
 
   &__title {
@@ -60,14 +64,14 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-  }
 
-  &__article {
-    margin-bottom: 15px;
-  }
+    &__article {
+      margin-bottom: 15px;
+    }
 
-  &__link {
-    margin: 20px 0;
+    &__link {
+      margin: 20px 0;
+    }
   }
 }
 

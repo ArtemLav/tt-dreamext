@@ -1,6 +1,6 @@
 'use strict';
 
-const page = document.querySelector('.page');
+const overlay = document.querySelector('.overlay');
 const contacts = document.querySelector('.contact-numbers');
 const showContactsBtn = document.querySelector('.main-info__contact-icon');
 const closeContactsBtn = document.querySelector('.contact-numbers__button');
@@ -15,6 +15,10 @@ const mainPhoto = document.querySelector('.gallery__main-photo');
 const gallery = document.querySelector('.gallery');
 const showGalleryElement = document.querySelector('.main-info__show-photos');
 const closeGalleryElement = document.querySelector('.gallery__close-button');
+const showMapElement = document.querySelector('.main-info__show-map');
+const closeMapElement = document.querySelector('.map-container__close-button');
+const mapContainer = document.querySelector('.map-container');
+const mapBox = document.querySelector('.map-container__map');
 
 showContactsBtn.addEventListener('click', () => showContacts());
 closeContactsBtn.addEventListener('click', () => closeContacts());
@@ -29,13 +33,23 @@ galleryRight.addEventListener('click', () => movePhoto('right'));
 galleryLeft.addEventListener('click', () => movePhoto('left'));
 
 showGalleryElement.addEventListener('click', () => {
-  page.style.background = 'rgba(22, 57, 91)';
+  overlay.classList.add('overlay_active');
   gallery.style.display = 'block';
 });
 
 closeGalleryElement.addEventListener('click', () => {
-  page.style.background = 'transparent';
+  overlay.classList.remove('overlay_active');
   gallery.style.display = 'none';
+});
+
+showMapElement.addEventListener('click', () => {
+  overlay.classList.add('overlay_active');
+  mapContainer.style.display = 'flex';
+});
+
+closeMapElement.addEventListener('click', () => {
+  overlay.classList.remove('overlay_active');
+  mapContainer.style.display = 'none';
 });
 
 photos.forEach(photo => photo.addEventListener('click', (event) => {
@@ -121,3 +135,24 @@ function movePhoto(direction) {
       break;
   }
 };
+
+function initMap() {
+  const mapPosition = {
+    lat: 50.44992,
+    lng: 30.52322,
+  };
+
+  // eslint-disable-next-line no-undef
+  const map = new google.maps.Map(mapBox, {
+    center: mapPosition,
+    zoom: 16,
+  });
+
+  // eslint-disable-next-line no-unused-vars,no-undef
+  const marker = new google.maps.Marker({
+    position: mapPosition,
+    map: map,
+  });
+}
+
+initMap();

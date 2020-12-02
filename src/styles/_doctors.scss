@@ -1,4 +1,5 @@
 .doctors {
+  position: relative;
   padding-top: 121px;
 
   &__heading {
@@ -22,18 +23,30 @@
   &__arrow-left {
     @extend %arrow-left;
     margin-top: 133px;
+
+    @media (max-width: 1650px) {
+      margin-top: 0;
+    }
   }
 
   &__arrow-right {
     @extend %arrow-right;
     margin-top: 133px;
+
+    @media (max-width: 1650px) {
+      margin-top: 0;
+    }
   }
 
   &__cards {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
     margin: 0 5px;
+
+    @media (max-width: 1650px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 
   &__card {
@@ -54,6 +67,10 @@
 
     &:not(:hover) {
       height: 305px;
+    }
+
+    @media (max-width: 1650px) {
+      margin-bottom: 20px;
     }
   }
 
@@ -199,27 +216,20 @@
       padding: 0 2vw;
     }
     &__cards {
-      margin-top: 15px;
-    }
-
-    &__card {
-      margin-top: 15px;
+      margin-top: 40px;
     }
   }
 }
 
 @media (max-width: $tablet-breakpoint) {
   .doctors {
-    &__cards {
-      margin: 0;
-    }
-  }
-}
 
-@media (max-width: $mobile-breakpoint) {
-  .doctors {
+    &__list {
+      padding: 27px 0 0;
+    }
+
     &__card {
-      margin: 15px 0 0;
+      margin: 0 auto 20px;
     }
   }
 }
