@@ -1,0 +1,235 @@
+.doctors {
+  position: relative;
+  padding-top: 121px;
+
+  &__heading {
+    @extend %section-heading;
+    padding: 0 125px;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__button {
+    @extend %show-more-button;
+  }
+
+  &__list {
+    @extend %cards__list;
+    align-items: flex-start;
+  }
+
+  &__arrow-left {
+    @extend %arrow-left;
+    margin-top: 133px;
+
+    @media (max-width: 1650px) {
+      margin-top: 0;
+    }
+  }
+
+  &__arrow-right {
+    @extend %arrow-right;
+    margin-top: 133px;
+
+    @media (max-width: 1650px) {
+      margin-top: 0;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 5px;
+
+    @media (max-width: 1650px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    width: 330px;
+    height: 305px;
+    border: 1px solid $border-color1;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      border-color: $optional-button-color;
+      box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+      height: 472px;
+    }
+
+    &:not(:hover) {
+      height: 305px;
+    }
+
+    @media (max-width: 1650px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__card-extra {
+    display: none;
+  }
+
+  &__card:hover .doctors__card-extra {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__card-header {
+    display: flex;
+    padding: 30px 30px 0;
+    border-bottom: 1px solid $border-color1;
+  }
+
+  &__card-photo {
+    margin-right: 16px;
+  }
+
+  &__card-title {
+    max-width: 174px;
+  }
+
+  &__card-name {
+    display: block;
+    margin-bottom: 13px;
+    color: $optional-text-color4;
+    font-weight: 600;
+  }
+
+  &__card-position {
+    @include manage-font(12px, 14px, 600);
+    color: $optional-text-color2;
+  }
+
+  &__card-status {
+    position: relative;
+    top: -20px;
+    left: 5px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: $optional-text-color1;
+    border: 1px solid white;
+    border-radius: 10px;
+
+    &_active {
+      background-color: $optional-button-color;
+    }
+  }
+
+  &__card-status-text {
+    position: relative;
+    top: -25px;
+    left: 6px;
+
+    @include manage-font(10px, 12.25px, 300);
+    color: $optional-text-color1;
+
+    &_active {
+      position: relative;
+      left: 20px;
+      font-weight: 750;
+      color: $optional-button-color;
+    }
+  }
+
+  &__card-info {
+    display: flex;
+    padding: 15px 28px 13px 30px;
+    border-bottom: 1px solid $border-color1;
+    justify-content: space-between;
+  }
+
+  &__card-info-title {
+    @include manage-font(12px, 14.7px, 450);
+    color: $optional-text-color3;
+  }
+
+  &__card-info-visual {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+  }
+
+  &__card-info-text {
+    display: block;
+    margin-left: 9px;
+    @include manage-font(12px, 15px, 750);
+  }
+
+  &__card-contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 23px 29px 18px;
+  }
+
+  &__card-contacts-title {
+    @include manage-font(12px, 14.7px, 450);
+    color: $optional-text-color3;
+  }
+
+  &__card-contacts-text {
+    @include manage-font(12px, 14.7px, 300);
+
+    &_top {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__card-contacts-button {
+    margin-top: 32px;
+    width: 128px;
+    height: 36px;
+
+    background-color: $optional-button-color;
+    border-radius: 2px;
+    border: none;
+
+    @include manage-font(14px, 24px, 600);
+    color: white;
+
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+    &:hover {
+      color: $optional-button-color;
+      background-color: white;
+      border: 1px solid $optional-button-color;
+    }
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .doctors {
+    padding-top: 50px;
+
+    &__heading {
+      padding: 0 2vw;
+    }
+    &__cards {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .doctors {
+
+    &__list {
+      padding: 27px 0 0;
+    }
+
+    &__card {
+      margin: 0 auto 20px;
+    }
+  }
+}

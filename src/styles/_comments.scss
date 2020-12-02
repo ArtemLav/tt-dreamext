@@ -1,0 +1,133 @@
+.comments {
+  padding: 120px 122px 0;
+
+  &__title {
+    @extend %section-title;
+    margin-bottom: 30px;
+  }
+
+  &__people {
+    display: flex;
+  }
+
+  &__person {
+    margin-left: 30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    padding-bottom: 16px;
+  }
+
+  &__photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__description {
+    margin-left: 20px;
+  }
+
+  &__name {
+    @include manage-font(20px, 25px, 600);
+    color: $optional-text-color4;
+  }
+
+  &__status {
+    margin-top: 5px;
+    @include manage-font(20px, 25px, 750);
+    color: $error-text-color;
+
+    &_active {
+      color: $optional-button-color;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    padding: 31px 31px 30px;
+    width: 451px;
+    height: 283px;
+    background-color: $comment-box-color;
+    border-radius: 4px;
+
+    &_pointed::before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 37px;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 18px solid $comment-box-color;
+    }
+  }
+
+  &__date {
+    position: relative;
+    left: 4px;
+
+    color: $optional-text-color3;
+    @include manage-font(14px, 17.15px, 450);
+  }
+
+  &__text {
+    margin-top: 2px;
+    @include manage-font(24px, 29.4px, 300);
+  }
+
+  &__link {
+    @extend %page-link;
+  }
+}
+
+@media (max-width: 1550px) {
+  .comments {
+
+    &__people {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__person {
+      margin: 20px 10px;
+
+      &:first-child {
+        margin: 20px 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .comments {
+    padding: 50px 2vw;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .comments {
+
+    &__photo {
+      margin-left: 5px;
+    }
+
+    &__bottom {
+      padding: 15px;
+      width: 330px;
+    }
+
+    &__date {
+      @include manage-font(12px, 14px, 450);
+    }
+
+    &__text {
+      @include manage-font(22px, 26px, 300);
+    }
+  }
+}

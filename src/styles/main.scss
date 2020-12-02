@@ -1,7 +1,51 @@
 @import "utils";
 @import "fonts";
-@import "typography";
+@import "reset";
+@import "header";
+@import "info";
+@import "main-info";
+@import "gallery";
+@import "map";
+@import "contact-numbers";
+@import "about";
+@import "specializations";
+@import "services";
+@import "doctors";
+@import "comments";
+@import "news";
+@import "download";
+@import "footer";
+@import "contacts";
 
-body {
-  background: $c-gray;
+html {
+  font-family: Avenir Next Cyr, sans-serif;
+  font-size: 16px;
+  line-height: 19.6px;
+  font-weight: 450;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1660px;
+  margin: 0 auto;
+}
+
+.overlay {
+  z-index: 10;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(22, 57, 91, 0.8);
+
+  opacity: 0;
+  pointer-events: none;
+
+  &_active {
+    opacity: 1;
+    pointer-events: all;
+  }
 }

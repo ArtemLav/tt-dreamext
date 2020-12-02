@@ -1,0 +1,199 @@
+.main-info {
+  position: relative;
+  display: flex;
+  color: white;
+
+  &__left-side {
+    padding: 66px 90px 82px;
+    width: 721px;
+    height: 600px;
+    background: linear-gradient(130.14deg, #2bbb97 45.98%, #25aef6 91.19%);
+    border-radius: 4px 0 0 4px;
+  }
+
+  &__title-container {
+    display: flex;
+    align-items: center;
+    margin-top: 17px;
+  }
+
+  &__title {
+    @include manage-font(36px, 44px, 600);
+  }
+
+  &__subtitle {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__mark {
+    display: flex;
+    justify-content: space-around;
+
+    margin-left: 22px;
+    width: 73px;
+    height: 30px;
+
+    @include manage-font(20px, 25px, 750);
+
+    border: 2px solid white;
+    border-radius: 4px;
+  }
+
+  &__location {
+    display: flex;
+    align-items: flex-start;
+    max-width: 540px;
+    margin-top: 42px;
+    @include manage-font(20px, 25px, 450);
+  }
+
+  &__location-icon {
+    margin-right: 18px;
+  }
+
+  &__phone,
+  &__web {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 23px;
+    @include manage-font(20px, 25px, 450);
+  }
+
+  &__phone-icon {
+    margin-right: 17px;
+  }
+
+  &__contact-icon {
+    margin: 5px 0 0 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__web-icon {
+    margin-right: 16px;
+  }
+
+  &__button-container {
+    margin-top: 42px;
+  }
+
+  &__button {
+    width: 200px;
+    height: 50px;
+
+    background: inherit;
+    color: white;
+    @include manage-font(16px, 24px, 600);
+
+    border: 2px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__right-side {
+    width: 690px;
+  }
+
+  &__right-top {
+    background: url("../images/doctor-photo.png") 50% 50%;
+    background-size: cover;
+  }
+
+  &__right-bottom {
+    background: url("../images/map.png") 50% 50%;
+    background-size: cover;
+  }
+
+  &__right-top,
+  &__right-bottom {
+    padding-top: 220px;
+    padding-left: 52px;
+    height: 300px;
+    box-shadow: 0 0 0 150px rgba(58, 89, 120, 0.8) inset;
+  }
+
+  &__right-description {
+    display: flex;
+    align-items: center;
+  }
+
+  &__show-photos {
+    margin-left: 13px;
+  }
+
+  &__show-map {
+    margin-left: 13px;
+  }
+
+  &__show-photos,
+  &__show-map {
+    @include manage-font(24px, 29px, 600);
+    cursor: pointer;
+
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .main-info {
+    &__left-side {
+      padding: 50px 70px 60px;
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .main-info {
+    flex-direction: column;
+
+    &__left-side {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+    }
+
+    &__right-side {
+      width: 100%;
+    }
+
+    &__show-map {
+      @include manage-font(20px, 24px, 600);
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .main-info {
+    &__left-side {
+      padding-left: 30px;
+    }
+
+    &__phone,
+    &__web,
+    &__location {
+      margin-top: 15px;
+      @include manage-font(16px, 22px, 600);
+    }
+
+    &__button-container {
+      margin-top: 15px;
+    }
+
+    &__show-photos,
+    &__show-map {
+      @include manage-font(18px, 22px, 600);
+    }
+  }
+}

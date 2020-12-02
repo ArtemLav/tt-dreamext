@@ -1,0 +1,85 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 125px 0;
+
+  &__article {
+    max-width: 933px;
+
+    @media (max-width: 1408px) {
+      max-width: 500px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    @extend %section-title;
+  }
+
+  &__paragraph {
+    margin-top: 35px;
+    @include manage-font(20px, 25px, 300);
+  }
+
+  &__link {
+    @extend %page-link;
+  }
+
+  &__schedule {
+    width: 330px;
+  }
+
+  &__work-day {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+
+    border-bottom: 1px solid $border-color1;
+
+    @include manage-font(20px, 25px, 450);
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+
+  &__day {
+    color: $optional-text-color3;
+  }
+
+  &__time {
+    color: $optional-text-color4;
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .about {
+    padding: 30px 2vw 0;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .about {
+    padding-top: 15px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    &__article {
+      margin-bottom: 15px;
+    }
+
+    &__link {
+      margin: 20px 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .about {
+    &__paragraph {
+      margin-top: 15px;
+      @include manage-font(16px, 20px, 300);
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.download {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  background: linear-gradient(125.51deg, #2bbb97 39.05%, #25aef6 70.06%);
+
+  &__phones {
+    margin-top: -70px;
+    margin-left: 113px;
+  }
+
+  &__title {
+    margin-left: 143px;
+    margin-right: 97px;
+    @include manage-font(28px, 34.3px, 600);
+    color: white;
+
+    @media (max-width: 1317px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__button {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .download {
+    padding: 0 10px;
+
+    &__phones {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .download {
+    &__title {
+      @include manage-font(22px, 28px, 600);
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .download {
+    &__title {
+      display: none;
+    }
+  }
+}

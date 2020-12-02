@@ -1,0 +1,103 @@
+.news {
+  padding: 95px 125px 0;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-top: 20px;
+    width: 330px;
+    height: 400px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: 1350px) {
+      &:last-child {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__image {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include manage-font(24px, 29.4px, 600);
+    color: $optional-text-color2;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__date {
+    @include manage-font(12px, 14.7px, 450);
+    color: $optional-text-color3;
+  }
+
+  &__extra {
+    display: flex;
+    align-items: center;
+  }
+
+  &__extra-icon {
+    margin-left: 13px;
+  }
+
+  &__extra-count {
+    margin-left: 7px;
+    @include manage-font(12px, 14.7px, 450);
+    color: $optional-text-color3;
+  }
+
+  &__link {
+    @extend %page-link;
+  }
+}
+
+@media (max-width: $small-desktop-breakpoint) {
+  .news {
+    padding: 21px 2vw 17px;
+
+    &__item {
+      &:last-child {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .news {
+
+    &__items {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      margin: 20px 0;
+
+      &:last-child {
+        margin: 20px 0;
+      }
+    }
+  }
+}

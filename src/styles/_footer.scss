@@ -1,0 +1,32 @@
+.footer {
+  margin-top: 158px;
+  background-color: $card-image-color;
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    margin: 62px 125px 0;
+    height: 88px;
+    border-top: 1px solid $optional-text-color3;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .footer {
+    margin-top: 80px;
+
+    &__copyright {
+      margin: 30px 70px 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .footer {
+    margin-top: 65px;
+
+    &__copyright {
+      margin: 20px 5px 0;
+    }
+  }
+}
