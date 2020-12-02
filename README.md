@@ -1,15 +1,15 @@
-###Moniheal
+# Moniheal
 
 You can checkout working demo [here](https://artemlav.github.io/tt-dreamext/)
 
-###Technologies used
+## Technologies used
 
 - HTML5
 - SCSS
 - JS(DOM)
 - Google maps API
 
-###Items to fix
+## Items to fix
 
 - adaptive layout of cards
 - adaptive of gallery
